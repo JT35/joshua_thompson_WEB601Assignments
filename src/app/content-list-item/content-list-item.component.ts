@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './content-list-item.component.scss'
 })
 export class ContentListItemComponent {
-
+  // @ts-ignore
+  contentItem: IContent;
 }

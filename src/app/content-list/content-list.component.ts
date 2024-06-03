@@ -8,5 +8,31 @@ import { Component } from '@angular/core';
   styleUrl: './content-list.component.scss'
 })
 export class ContentListComponent {
-
+  contentItems: IContent[] = [
+    {
+      "title" : "The Lord of the Rings",
+      "genre" : "Fantasy",
+      "price" : 30.99
+    },
+    {
+      "title" : "Harry Potter",
+      "genre" : "Fantasy",
+      "price" : 80.99
+    },
+    {
+      "title" : "Star Wars",
+      "genre" : "Fantasy",
+      "price" : 19.99
+    },
+    {
+      "title" : "Indiana Jones",
+      "genre" : "Adventure",
+      "price" : 19.99
+    },
+    {
+      "title" : "Pirates of the Caribbean",
+      "genre" : "Adventure",
+      "price" : 19.99
+    }
+  ];
 }
