@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import {ContentListItemComponent} from "../content-list-item/content-list-item.component";
+import {IContent} from "../IContent";
 
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [],
+  imports: [
+    ContentListItemComponent
+  ],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
@@ -12,27 +16,27 @@ export class ContentListComponent {
     {
       "title" : "The Lord of the Rings",
       "genre" : "Fantasy",
-      "price" : 30.99
+      "price" : 60.00
     },
     {
       "title" : "Harry Potter",
       "genre" : "Fantasy",
-      "price" : 80.99
+      "price" : 71.41
     },
     {
       "title" : "Star Wars",
       "genre" : "Fantasy",
-      "price" : 19.99
+      "price" : 159.95
     },
     {
       "title" : "Indiana Jones",
       "genre" : "Adventure",
-      "price" : 19.99
+      "price" : 34.95
     },
     {
       "title" : "Pirates of the Caribbean",
       "genre" : "Adventure",
-      "price" : 19.99
+      "price" : 119.99
     }
   ];
 }
