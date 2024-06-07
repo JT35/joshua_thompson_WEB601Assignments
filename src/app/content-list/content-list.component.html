@@ -1,5 +1,1 @@
-<app-content-list-item [contentItem]="contentItems.at(0)!"></app-content-list-item>
-<app-content-list-item [contentItem]="contentItems.at(1)!"></app-content-list-item>
-<app-content-list-item [contentItem]="contentItems.at(2)!"></app-content-list-item>
-<app-content-list-item [contentItem]="contentItems.at(3)!"></app-content-list-item>
-<app-content-list-item [contentItem]="contentItems.at(4)!"></app-content-list-item>
+<app-content-list-item *ngFor="let item of contentItems; let i = index" [isEven]="i % 2 === 1" [contentItem]="item"></app-content-list-item>
