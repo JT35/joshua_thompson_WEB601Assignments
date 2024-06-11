@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IContent} from "../IContent";
+import {IContent} from "../../models/IContent";
 import {NgClass} from "@angular/common";
 
 @Component({
