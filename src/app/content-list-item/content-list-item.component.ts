@@ -12,8 +12,8 @@ import {NgClass} from "@angular/common";
   styleUrl: './content-list-item.component.scss'
 })
 export class ContentListItemComponent {
-  // @ts-ignore
-  @Input() contentItem: IContent;
-  // @ts-ignore
-  @Input() isEven: boolean;
+  @Input()
+  contentItem!: IContent;
+  @Input()
+  isEven!: boolean;
 }

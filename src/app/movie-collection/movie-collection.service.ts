@@ -14,6 +14,27 @@ export class MovieCollectionService {
     return this.contentItems;
   }
 
+  getContentAt(id: number): Observable<IContent> {
+    return of(this.getContent().find(item => item.id === id)!);
+  }
+
+  create(item: IContent): Observable<IContent[]> {
+    this.contentItems.push(item);
+    this.updateContent(this.getContent());
+    return of(this.getContent());
+  }
+
+  update(id: number, newItem: IContent): Observable<IContent[]> {
+    this.contentItems[id] = newItem;
+    return of(this.getContent());
+  }
+
+  delete(id: number): Observable<IContent> {
+    let deletedItem = this.contentItems[id];
+    this.contentItems.splice(id, 1);
+    return of(deletedItem);
+  }
+
   updateContent(newContent: IContent[]) {
     this.contentItems = newContent;
   }

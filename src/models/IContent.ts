@@ -1,4 +1,5 @@
 export interface IContent {
+  id: number;
   title: string;
   imgSrc: string;
   genre: string;
