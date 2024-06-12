@@ -14,7 +14,12 @@ export class MovieCollectionService {
     return this.contentItems;
   }
 
+  updateContent(newContent: IContent[]) {
+    this.contentItems = newContent;
+  }
+
   fetchData(): Observable<IContent[]> {
     return of(this.getContent());
   }
+
 }
