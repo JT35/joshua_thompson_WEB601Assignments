@@ -16,16 +16,11 @@ import {MovieCollectionService} from "../movie-collection/movie-collection.servi
 })
 export class ContentListComponent implements OnInit {
 
-  content: IContent[] = [];
+  content?: IContent[];
 
   constructor(protected contentService: MovieCollectionService) {}
 
   ngOnInit() {
-    this.content = this.contentService.getContent();
-  }
-
-  updateContent(newContent: IContent[]) {
-    this.contentService.updateContent(newContent);
     this.content = this.contentService.getContent();
   }
 
