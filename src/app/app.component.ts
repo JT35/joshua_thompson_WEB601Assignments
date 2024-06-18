@@ -27,7 +27,7 @@ export class AppComponent {
       id: 6, title: 'Spider Man', imgSrc: 'src/assets/spiderman.jpg', genre: 'Action',
       price: 69.98, link: 'https://www.amazon.ca/Spider-Man-Complete-Five-Collection-Blu-ray/dp/B0743KQ4RH/ref=asc_df_B0743KQ4RH?tag=bingshopdesk-20&linkCode=df0&hvadid=80127001873044&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=&hvtargid=pla-4583726555208208&psc=1'
     })
-    this.contentItem$ = of(this.contentService.getContentFromId(6));
+    this.contentItem$ = this.contentService.getContentFromId(6);
   }
 
   protected readonly ContentListComponent = ContentListComponent;

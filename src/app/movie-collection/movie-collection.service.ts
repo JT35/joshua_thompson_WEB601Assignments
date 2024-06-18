@@ -18,8 +18,8 @@ export class MovieCollectionService {
     return of(this.contentItems);
   }
 
-  getContentFromId(id: number): IContent {
-    return this.getContent().find(item => item.id === id)!;
+  getContentFromId(id: number): Observable<IContent> {
+    return of(this.getContent().find(item => item.id === id)!);
   }
 
   create(item: IContent): Observable<IContent[]> {
