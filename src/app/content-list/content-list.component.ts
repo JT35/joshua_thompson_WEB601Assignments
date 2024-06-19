@@ -3,6 +3,8 @@ import {ContentListItemComponent} from "../content-list-item/content-list-item.c
 import {IContent} from "../../models/IContent";
 import {NgForOf} from "@angular/common";
 import {MovieCollectionService} from "../movie-collection/movie-collection.service";
+import {Observable} from "rxjs";
+import {contentItems} from "../../data/mock-content";
 
 @Component({
   imports: [
@@ -16,12 +18,13 @@ import {MovieCollectionService} from "../movie-collection/movie-collection.servi
 })
 export class ContentListComponent implements OnInit {
 
-  content?: IContent[];
+  content?: Observable<IContent[]>;
 
   constructor(protected contentService: MovieCollectionService) {}
 
   ngOnInit() {
-    this.content = this.contentService.getContent();
+    this.content = this.contentService.getAllContentItems$();
   }
 
+  protected readonly contentItems = contentItems;
 }
