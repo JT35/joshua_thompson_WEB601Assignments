@@ -26,5 +26,4 @@ export class ContentListComponent implements OnInit {
     this.content = this.contentService.getAllContentItems$();
   }
 
-  protected readonly contentItems = contentItems;
 }
