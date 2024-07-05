@@ -4,12 +4,14 @@ import {IContent} from "../../models/IContent";
 import {NgForOf} from "@angular/common";
 import {MovieCollectionService} from "../movie-collection/movie-collection.service";
 import {Observable} from "rxjs";
-import {contentItems} from "../../data/mock-content";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @Component({
   imports: [
     ContentListItemComponent,
-    NgForOf
+    NgForOf,
+    RouterLink,
+    RouterLinkActive,
   ],
   selector: 'app-content-list',
   standalone: true,

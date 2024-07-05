@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
 import {AsyncPipe, NgIf, NgOptimizedImage} from "@angular/common";
 import {ContentListComponent} from "./content-list/content-list.component";
 import {ContentListItemComponent} from "./content-list-item/content-list-item.component";
 import {MovieCollectionService} from "./movie-collection/movie-collection.service";
 import {IContent} from "../models/IContent";
-import {contentItems} from "../data/mock-content";
-import {Observable, of} from "rxjs";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgOptimizedImage, ContentListComponent, ContentListItemComponent, NgIf, AsyncPipe],
+  imports: [RouterOutlet, RouterLink, NgOptimizedImage, ContentListComponent, ContentListItemComponent, NgIf, AsyncPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
