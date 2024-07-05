@@ -1,7 +1,3 @@
 <main>
-  <h1>Favourite Movies (Collections):</h1>
-  <app-content-list-item
-    *ngIf="contentItem$ | async as contentItem"
-    [contentItem]="contentItem"></app-content-list-item>
-  <app-content-list></app-content-list>
+  <router-outlet></router-outlet>
 </main>

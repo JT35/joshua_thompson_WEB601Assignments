@@ -3,11 +3,15 @@ import {ContentListItemComponent} from "../content-list-item/content-list-item.c
 import {IContent} from "../../models/IContent";
 import {NgForOf} from "@angular/common";
 import {MovieCollectionService} from "../movie-collection/movie-collection.service";
+import {Observable} from "rxjs";
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @Component({
   imports: [
     ContentListItemComponent,
-    NgForOf
+    NgForOf,
+    RouterLink,
+    RouterLinkActive,
   ],
   selector: 'app-content-list',
   standalone: true,
@@ -16,12 +20,12 @@ import {MovieCollectionService} from "../movie-collection/movie-collection.servi
 })
 export class ContentListComponent implements OnInit {
 
-  content?: IContent[];
+  content?: Observable<IContent[]>;
 
   constructor(protected contentService: MovieCollectionService) {}
 
   ngOnInit() {
-    this.content = this.contentService.getContent();
+    this.content = this.contentService.getAllContentItems$();
   }
 
 }
