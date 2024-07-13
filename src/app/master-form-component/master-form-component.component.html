@@ -1,0 +1,13 @@
+<h1>Movie Collection Services</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="action">Action: *</label>
+  <select id="action" formControlName="action">
+    <option value="add">Add Movie Collection</option>
+    <option value="find">Find Movie Collection</option>
+    <option value="edit">Edit Movie Collection</option>
+    <option value="remove">Remove Movie Collection</option>
+  </select><br><br>
+
+  <button type="submit">Confirm</button>
+  <button type="button" routerLink="/content">Cancel</button>
+</form>

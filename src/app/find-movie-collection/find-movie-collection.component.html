@@ -1,0 +1,8 @@
+<h1>Find Movie Collection</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="id">Movie Collection ID: </label>
+  <input id="id" type="text" formControlName="id"><br><br>
+
+  <button type="submit">Search</button>
+  <button type="button" routerLink="/services">Cancel</button>
+</form>

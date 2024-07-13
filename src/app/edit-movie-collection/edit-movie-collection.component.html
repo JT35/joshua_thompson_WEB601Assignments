@@ -1,0 +1,23 @@
+<h1>Edit Movie Collection</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="id">Movie Collection ID: *</label>
+  <input id="id" type="text" formControlName="id"><br><br>
+
+  <label for="title">Title: *</label>
+  <input id="title" type="text" formControlName="title"><br><br>
+
+  <label for="genre">Genre: *</label>
+  <input id="genre" type="text" formControlName="genre"><br><br>
+
+  <label for="imgSrc">Display Image: *</label>
+  <input id="imgSrc" type="file" formControlName="imgSrc"><br><br>
+
+  <label for="price">Price: *</label>
+  <input id="price" type=number formControlName="price"><br><br>
+
+  <label for="link">Purchase Link: *</label>
+  <input id="link" type="url" formControlName="link"><br><br>
+
+  <button type="submit">Edit</button>
+  <button type="button" routerLink="/services">Cancel</button>
+</form>
