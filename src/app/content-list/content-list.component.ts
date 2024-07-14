@@ -6,6 +6,7 @@ import {MovieCollectionService} from "../movie-collection/movie-collection.servi
 import {Observable} from "rxjs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
 import {FilterIContentPipe} from "../filter-icontent.pipe";
+import {HighlighterDirective} from "../highlighter.directive";
 
 @Component({
   imports: [
@@ -14,6 +15,8 @@ import {FilterIContentPipe} from "../filter-icontent.pipe";
     RouterLink,
     RouterLinkActive,
     FilterIContentPipe,
+    FilterIContentPipe,
+    HighlighterDirective,
   ],
   selector: 'app-content-list',
   standalone: true,

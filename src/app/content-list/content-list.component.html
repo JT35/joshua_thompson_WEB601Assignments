@@ -1,11 +1,23 @@
 <a routerLink="../services" routerLinkActive="active">Services</a><br>
 <h1>Favourite Movies (Collections):</h1>
-<app-content-list-item
-  *ngFor="let item of (contentService.getContent() | filterIContent: 'favourite');"
-  [contentItem]="item"></app-content-list-item>
-<app-content-list-item
-  *ngFor="let item of (contentService.getContent() | filterIContent: 'interesting');"
-  [contentItem]="item"></app-content-list-item>
-<app-content-list-item
-  *ngFor="let item of (contentService.getContent() | filterIContent);"
-  [contentItem]="item"></app-content-list-item>
+<div appHighlighter [colour]="'cornflowerblue'" [textColour]="'darkslateblue'">
+    <h2>Favourites</h2>
+    <app-content-list-item
+        *ngFor="let item of (contentService.getContent() | filterIContent: 'favourite');"
+        [contentItem]="item">
+    </app-content-list-item>
+</div>
+<div appHighlighter [colour]="'white'" [textColour]="'purple'">
+    <h2>Interesting</h2>
+    <app-content-list-item
+        *ngFor="let item of (contentService.getContent() | filterIContent: 'interesting');"
+        [contentItem]="item">
+    </app-content-list-item>
+</div>
+<div appHighlighter>
+  <h2>Uncategorized</h2>
+  <app-content-list-item
+    *ngFor="let item of (contentService.getContent() | filterIContent);"
+    [contentItem]="item">
+  </app-content-list-item>
+</div>

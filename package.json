@@ -11,7 +11,8 @@
     "newclass": "ng generate class",
     "newcomponent": "ng generate component",
     "newservice": "ng generate service",
-    "newpipe": "ng generate pipe"
+    "newpipe": "ng generate pipe",
+    "newdirective": "ng generate directive"
   },
   "private": true,
   "dependencies": {
