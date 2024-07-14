@@ -10,7 +10,8 @@
     "newinterface": "ng generate interface",
     "newclass": "ng generate class",
     "newcomponent": "ng generate component",
-    "newservice": "ng generate service"
+    "newservice": "ng generate service",
+    "newpipe": "ng generate pipe"
   },
   "private": true,
   "dependencies": {
