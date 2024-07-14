@@ -5,6 +5,7 @@ import {NgForOf} from "@angular/common";
 import {MovieCollectionService} from "../movie-collection/movie-collection.service";
 import {Observable} from "rxjs";
 import {RouterLink, RouterLinkActive} from "@angular/router";
+import {FilterIContentPipe} from "../filter-icontent.pipe";
 
 @Component({
   imports: [
@@ -12,6 +13,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     NgForOf,
     RouterLink,
     RouterLinkActive,
+    FilterIContentPipe,
   ],
   selector: 'app-content-list',
   standalone: true,
