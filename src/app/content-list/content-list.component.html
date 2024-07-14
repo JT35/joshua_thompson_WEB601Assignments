@@ -7,14 +7,14 @@
         [contentItem]="item">
     </app-content-list-item>
 </div>
-<div appHighlighter [colour]="'white'" [textColour]="'purple'">
+<div appHighlighter>
     <h2>Interesting</h2>
     <app-content-list-item
         *ngFor="let item of (contentService.getContent() | filterIContent: 'interesting');"
         [contentItem]="item">
     </app-content-list-item>
 </div>
-<div appHighlighter>
+<div appHighlighter [colour]="'grey'" [textColour]="'white'">
   <h2>Uncategorized</h2>
   <app-content-list-item
     *ngFor="let item of (contentService.getContent() | filterIContent);"
