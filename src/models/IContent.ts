@@ -5,4 +5,5 @@ export interface IContent {
   genre: string;
   price: number;
   link: string;
+  type?: string;
 }
